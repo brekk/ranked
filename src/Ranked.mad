@@ -1,0 +1,64 @@
+binary :: (a -> b -> c) -> #[a, b] -> c
+export binary = (fn, pair) => where(pair) {
+  #[a, b] =>
+    fn(a, b)
+}
+export n2 = binary
+
+ternary :: (a -> b -> c -> d) -> #[a, b, c] -> d
+export ternary = (fn, t) => where(t) {
+  #[a, b, c] =>
+    fn(a, b, c)
+}
+export n3 = ternary
+
+quaternary :: (a -> b -> c -> d -> e) -> #[a, b, c, d] -> e
+export quaternary = (fn, t) => where(t) {
+  #[a, b, c, d] =>
+    fn(a, b, c, d)
+}
+export n4 = quaternary
+
+quinary :: (a -> b -> c -> d -> e -> f) -> #[a, b, c, d, e] -> f
+export quinary = (fn, t) => where(t) {
+  #[a, b, c, d, e] =>
+    fn(a, b, c, d, e)
+}
+export n5 = quinary
+
+senary :: (a -> b -> c -> d -> e -> f -> g) -> #[a, b, c, d, e, f] -> g
+export senary = (fn, t) => where(t) {
+  #[a, b, c, d, e, f] =>
+    fn(a, b, c, d, e, f)
+}
+export n6 = senary
+
+septenary :: (a -> b -> c -> d -> e -> f -> g -> h) -> #[a, b, c, d, e, f, g] -> h
+export septenary = (fn, t) => where(t) {
+  #[a, b, c, d, e, f, g] =>
+    fn(a, b, c, d, e, f, g)
+}
+export n7 = septenary
+
+octonary :: (a -> b -> c -> d -> e -> f -> g -> h -> i) -> #[a, b, c, d, e, f, g, h] -> i
+export octonary = (fn, t) => where(t) {
+  #[a, b, c, d, e, f, g, h] =>
+    fn(a, b, c, d, e, f, g, h)
+}
+export n8 = octonary
+
+novenary :: (a -> b -> c -> d -> e -> f -> g -> h -> i -> j) -> #[a, b, c, d, e, f, g, h, i] -> j
+export novenary = (fn, t) => where(t) {
+  #[a, b, c, d, e, f, g, h, i] =>
+    fn(a, b, c, d, e, f, g, h, i)
+}
+export n9 = novenary
+
+denary :: (a -> b -> c -> d -> e -> f -> g -> h -> i -> j -> k)
+  -> #[a, b, c, d, e, f, g, h, i, j]
+  -> k
+export denary = (fn, t) => where(t) {
+  #[a, b, c, d, e, f, g, h, i, j] =>
+    fn(a, b, c, d, e, f, g, h, i, j)
+}
+export n10 = denary

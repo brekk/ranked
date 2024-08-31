@@ -1,0 +1,15 @@
+{
+  "name": "ranked",
+  "version": "0.0.1",
+  "main": "src/Ranked.mad",
+  "importAliases": {
+    ".": "src"
+  },
+  "dependencies": [
+    {
+      "url": "https://github.com/brekk/study/archive/refs/tags/v0.0.3.zip",
+      "description": "Study",
+      "minVersion": "0.0.3"
+    }
+  ]
+}
