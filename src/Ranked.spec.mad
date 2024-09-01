@@ -1,14 +1,19 @@
+import {} from "Show"
 import String from "String"
 
 import { report } from "Study"
 
-import { n10, n2, n3, n4, n5, n6, n7, n8, n9 } from "@/Ranked"
+import { n2, n3, n4, n5, n6, n7, n8, n9 } from "@/Ranked"
 
 
 
-ten = (a, b, c, d, e, f, g, h, i, j) => String.fromList([a, b, c, d, e, f, g, h, i, j])
+nine = (a, b, c, d, e, f, g, h, i) => String.fromList([a, b, c, d, e, f, g, h, i])
 
-// report(n2(ten('1','2','3','4','5','6','7','8')), "binary", [#[#['a', 'b'], "12345678ab"]])
-// report(n3(ten('1','2','3','4','5','6','7')), "ternary", [#[#['a', 'b', 'c'], "1234567abc"]])
-
-report(n10(ten), "denary", [#[#['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'], "abcdefghij"]])
+report(n2(nine('1', '2', '3', '4', '5', '6', '7')), "binary", [#[#['a', 'b'], "1234567ab"]])
+report(n3(nine('1', '2', '3', '4', '5', '6')), "ternary", [#[#['a', 'b', 'c'], "123456abc"]])
+report(n4(nine('1', '2', '3', '4', '5')), "quaternary", [#[#['a', 'b', 'c', 'd'], "12345abcd"]])
+report(n5(nine('1', '2', '3', '4')), "quinary", [#[#['a', 'b', 'c', 'd', 'e'], "1234abcde"]])
+report(n6(nine('1', '2', '3')), "senary", [#[#['a', 'b', 'c', 'd', 'e', 'f'], "123abcdef"]])
+report(n7(nine('1', '2')), "septenary", [#[#['a', 'b', 'c', 'd', 'e', 'f', 'g'], "12abcdefg"]])
+report(n8(nine('1')), "octonary", [#[#['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'], "1abcdefgh"]])
+report(n9(nine), "novenary", [#[#['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'], "abcdefghi"]])

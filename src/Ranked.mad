@@ -54,6 +54,7 @@ export novenary = (fn, t) => where(t) {
 }
 export n9 = novenary
 
+/*
 denary :: (a -> b -> c -> d -> e -> f -> g -> h -> i -> j -> k)
   -> #[a, b, c, d, e, f, g, h, i, j]
   -> k
@@ -62,3 +63,4 @@ export denary = (fn, t) => where(t) {
     fn(a, b, c, d, e, f, g, h, i, j)
 }
 export n10 = denary
+*/
