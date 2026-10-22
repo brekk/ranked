@@ -1,0 +1,17 @@
+// import IO from "IO"
+import Math from "Math"
+
+import Study from "Study"
+
+import M from "@/Memo"
+import R from "@/Ranked"
+
+
+
+// if you uncomment the IO here you'll see that even though we're hitting the memoized values on the third run
+// we could write a test for this but that sounds exhausting when we could just publish this
+powpow = pipe(
+  // IO.pTrace("runcheck"),
+  R.n2(Math.pow),
+)
+Study.report(M.memoize(powpow), "memoize!", [#[#[2, 2], 4], #[#[2, 4], 16], #[#[2, 4], 16]])

@@ -4,11 +4,11 @@ import String from "String"
 import { report } from "Study"
 
 import { n2, n3, n4, n5, n6, n7, n8, n9 } from "@/Ranked"
+import Un from "@/Unranked"
 
 
 
 nine = (a, b, c, d, e, f, g, h, i) => String.fromList([a, b, c, d, e, f, g, h, i])
-
 report(n2(nine('1', '2', '3', '4', '5', '6', '7')), "binary", [#[#['a', 'b'], "1234567ab"]])
 report(n3(nine('1', '2', '3', '4', '5', '6')), "ternary", [#[#['a', 'b', 'c'], "123456abc"]])
 report(n4(nine('1', '2', '3', '4', '5')), "quaternary", [#[#['a', 'b', 'c', 'd'], "12345abcd"]])
@@ -17,3 +17,18 @@ report(n6(nine('1', '2', '3')), "senary", [#[#['a', 'b', 'c', 'd', 'e', 'f'], "1
 report(n7(nine('1', '2')), "septenary", [#[#['a', 'b', 'c', 'd', 'e', 'f', 'g'], "12abcdefg"]])
 report(n8(nine('1')), "octonary", [#[#['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'], "1abcdefgh"]])
 report(n9(nine), "novenary", [#[#['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'], "abcdefghi"]])
+report(
+  Un.un9(n9(nine), 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'),
+  "un9 novenary",
+  [#['i', "abcdefghi"]],
+)
+report(Un.un8(n8(nine('1')), 'a', 'b', 'c', 'd', 'e', 'f', 'g'), "un8", [#['i', "1abcdefgi"]])
+report(Un.un7(n7(nine('1', '2')), 'a', 'b', 'c', 'd', 'e', 'f'), "un7", [#['i', "12abcdefi"]])
+report(Un.un6(n6(nine('1', '2', '3')), 'a', 'b', 'c', 'd', 'e'), "un6", [#['i', "123abcdei"]])
+report(Un.un5(n5(nine('1', '2', '3', '4')), 'a', 'b', 'c', 'd'), "un5", [#['i', "1234abcdi"]])
+report(Un.un4(n4(nine('1', '2', '3', '4', '5')), 'a', 'b', 'c'), "un4", [#['i', "12345abci"]])
+report(Un.un3(n3(nine('1', '2', '3', '4', '5', '6')), 'a', 'b'), "un3", [#['i', "123456abi"]])
+report(Un.un2(n2(nine('1', '2', '3', '4', '5', '6', '7')), 'a'), "un2", [#['i', "1234567ai"]])
+
+// ten = (a, b, c, d, e, f, g, h, i, j) => String.fromList([a, b, c, d, e, f, g, h, i, j])
+// report(n10(ten), "denary", [#[#['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'], "abcdefghij"]])

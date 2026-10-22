@@ -1,0 +1,8 @@
+export un2 = (fn, a, b) => fn(#[a, b])
+export un3 = (fn, a, b, c) => fn(#[a, b, c])
+export un4 = (fn, a, b, c, d) => fn(#[a, b, c, d])
+export un5 = (fn, a, b, c, d, e) => fn(#[a, b, c, d, e])
+export un6 = (fn, a, b, c, d, e, f) => fn(#[a, b, c, d, e, f])
+export un7 = (fn, a, b, c, d, e, f, g) => fn(#[a, b, c, d, e, f, g])
+export un8 = (fn, a, b, c, d, e, f, g, h) => fn(#[a, b, c, d, e, f, g, h])
+export un9 = (fn, a, b, c, d, e, f, g, h, i) => fn(#[a, b, c, d, e, f, g, h, i])

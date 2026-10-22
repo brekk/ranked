@@ -1,0 +1,23 @@
+import Dict from "Dictionary"
+import Maybe from "Maybe"
+
+
+
+export memoized = (dict, fun) => {
+  saved = dict
+  return (xx) => pipe(
+    Dict.get($, saved),
+    where {
+      Maybe.Just(x) =>
+        x
+
+      Maybe.Nothing =>
+        do {
+          yy = fun(xx)
+          saved := Dict.insert(xx, yy, saved)
+          return yy
+        }
+    },
+  )(xx)
+}
+export memoize = memoized(Dict.empty)
