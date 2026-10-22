@@ -3,10 +3,13 @@ import Maybe from "Maybe"
 
 
 
-export memoized = (dict, fun) => {
+// pretty sure this still monomorphizes on arity, so you can only reuse the
+// dictionaries of same arity
+export memoizeWithDictionary = (dict, fun) => {
   saved = dict
-  return (xx) => pipe(
-    Dict.get($, saved),
+  record = () => saved
+  get = (xx) => pipe(
+    Dict.get($, record()),
     where {
       Maybe.Just(x) =>
         x
@@ -19,5 +22,11 @@ export memoized = (dict, fun) => {
         }
     },
   )(xx)
+  return { record, get }
 }
-export memoize = memoized(Dict.empty)
+export memoizeWith = memoizeWithDictionary(Dict.empty)
+// if you don't need the raw accessor
+export memoize = pipe(
+  memoizeWith,
+  .get,
+)

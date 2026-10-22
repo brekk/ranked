@@ -1,4 +1,5 @@
 // import IO from "IO"
+import Dict from "Dictionary"
 import Math from "Math"
 
 import Study from "Study"
@@ -8,10 +9,22 @@ import R from "@/Ranked"
 
 
 
+powTuple :: #[Float, Float] -> Float
+powTuple = R.n2(Math.pow)
 // if you uncomment the IO here you'll see that even though we're hitting the memoized values on the third run
 // we could write a test for this but that sounds exhausting when we could just publish this
 powpow = pipe(
   // IO.pTrace("runcheck"),
-  R.n2(Math.pow),
+  powTuple,
 )
-Study.report(M.memoize(powpow), "memoize!", [#[#[2, 2], 4], #[#[2, 4], 16], #[#[2, 4], 16]])
+double2 = #[2, 2]
+Study.report(M.memoize(powpow), "memoize!", [#[double2, 4], #[#[2, 4], 16], #[#[2, 4], 16]])
+// ok, because I'm a glutton for punishment, let's prove it
+// we can set an incorrect memoized value, which is tricky and interesting
+
+LIES = Dict.fromList([#[double2, 100], #[#[2, 4], 150]])
+Study.report(
+  M.memoizeWithDictionary(LIES, powpow).get,
+  "memoizeWithDictionary won't run the function if there's a prior value in the lookup",
+  [#[#[1, 1], 1], #[double2, 100], #[#[2, 4], 150]],
+)
