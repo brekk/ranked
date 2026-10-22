@@ -1,0 +1,52 @@
+{
+  "buildHash": "9a8e46a58beb467e0c5a576ecf4992dc",
+  "jsApi": {
+    "apiInstances": [],
+    "apiAliases": {},
+    "apiInterfaces": {},
+    "apiNames": {
+      "novenary": "(a -> b -> c -> d -> e -> f -> g -> h -> i -> j) -> (,,,,,,,,) a b c d e f g h i -> j",
+      "octonary": "(a -> b -> c -> d -> e -> f -> g -> h -> i) -> (,,,,,,,) a b c d e f g h -> i",
+      "n6": "(a -> b -> c -> d -> e -> f -> g) -> (,,,,,) a b c d e f -> g",
+      "n3": "(a -> b -> c -> d) -> #[a, b, c] -> d",
+      "n8": "(a -> b -> c -> d -> e -> f -> g -> h -> i) -> (,,,,,,,) a b c d e f g h -> i",
+      "senary": "(a -> b -> c -> d -> e -> f -> g) -> (,,,,,) a b c d e f -> g",
+      "n5": "(a -> b -> c -> d -> e -> f) -> (,,,,) a b c d e -> f",
+      "n7": "(a -> b -> c -> d -> e -> f -> g -> h) -> (,,,,,,) a b c d e f g -> h",
+      "binary": "(a -> b -> c) -> #[a, b] -> c",
+      "ternary": "(a -> b -> c -> d) -> #[a, b, c] -> d",
+      "quaternary": "(a -> b -> c -> d -> e) -> #[a, b, c, d] -> e",
+      "n9": "(a -> b -> c -> d -> e -> f -> g -> h -> i -> j) -> (,,,,,,,,) a b c d e f g h i -> j",
+      "n2": "(a -> b -> c) -> #[a, b] -> c",
+      "quinary": "(a -> b -> c -> d -> e -> f) -> (,,,,) a b c d e -> f",
+      "septenary": "(a -> b -> c -> d -> e -> f -> g -> h) -> (,,,,,,) a b c d e f g -> h",
+      "n4": "(a -> b -> c -> d -> e) -> #[a, b, c, d] -> e"
+    },
+    "apiTypes": {}
+  },
+  "llvmApi": {
+    "apiInstances": [],
+    "apiAliases": {},
+    "apiInterfaces": {},
+    "apiNames": {
+      "novenary": "(a -> b -> c -> d -> e -> f -> g -> h -> i -> j) -> (,,,,,,,,) a b c d e f g h i -> j",
+      "octonary": "(a -> b -> c -> d -> e -> f -> g -> h -> i) -> (,,,,,,,) a b c d e f g h -> i",
+      "n6": "(a -> b -> c -> d -> e -> f -> g) -> (,,,,,) a b c d e f -> g",
+      "n3": "(a -> b -> c -> d) -> #[a, b, c] -> d",
+      "n8": "(a -> b -> c -> d -> e -> f -> g -> h -> i) -> (,,,,,,,) a b c d e f g h -> i",
+      "senary": "(a -> b -> c -> d -> e -> f -> g) -> (,,,,,) a b c d e f -> g",
+      "n5": "(a -> b -> c -> d -> e -> f) -> (,,,,) a b c d e -> f",
+      "n7": "(a -> b -> c -> d -> e -> f -> g -> h) -> (,,,,,,) a b c d e f g -> h",
+      "binary": "(a -> b -> c) -> #[a, b] -> c",
+      "ternary": "(a -> b -> c -> d) -> #[a, b, c] -> d",
+      "quaternary": "(a -> b -> c -> d -> e) -> #[a, b, c, d] -> e",
+      "n9": "(a -> b -> c -> d -> e -> f -> g -> h -> i -> j) -> (,,,,,,,,) a b c d e f g h i -> j",
+      "n2": "(a -> b -> c) -> #[a, b] -> c",
+      "quinary": "(a -> b -> c -> d -> e -> f) -> (,,,,) a b c d e -> f",
+      "septenary": "(a -> b -> c -> d -> e -> f -> g -> h) -> (,,,,,,) a b c d e f g -> h",
+      "n4": "(a -> b -> c -> d -> e) -> #[a, b, c, d] -> e"
+    },
+    "apiTypes": {}
+  },
+  "versionHash": "25e64aa754c310d45c1e084d574c1bb0"
+}
