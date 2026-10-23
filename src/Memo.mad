@@ -1,5 +1,6 @@
 import Dict from "Dictionary"
 import Maybe from "Maybe"
+import Tuple from "Tuple"
 
 
 
@@ -8,25 +9,30 @@ import Maybe from "Maybe"
 export memoizeWithDictionary = (dict, fun) => {
   saved = dict
   record = () => saved
-  get = (xx) => pipe(
-    Dict.get($, record()),
-    where {
-      Maybe.Just(x) =>
-        x
+  set = (x) => {
+    saved := x
+  }
+  return #[
+    record,
+    (xx) => pipe(
+      Dict.get($, record()),
+      where {
+        Maybe.Just(x) =>
+          x
 
-      Maybe.Nothing =>
-        do {
-          yy = fun(xx)
-          saved := Dict.insert(xx, yy, saved)
-          return yy
-        }
-    },
-  )(xx)
-  return { record, get }
+        Maybe.Nothing =>
+          do {
+            yy = fun(xx)
+            set(Dict.insert(xx, yy, record()))
+            return yy
+          }
+      },
+    )(xx),
+  ]
 }
 export memoizeWith = memoizeWithDictionary(Dict.empty)
 // if you don't need the raw accessor
 export memoize = pipe(
   memoizeWith,
-  .get,
+  Tuple.snd,
 )

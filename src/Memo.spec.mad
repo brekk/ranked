@@ -1,6 +1,7 @@
 import Dict from "Dictionary"
 import IO from "IO"
 import Math from "Math"
+import Tuple from "Tuple"
 
 import Study from "Study"
 
@@ -24,13 +25,9 @@ Study.report(M.memoize(powpow), "memoize!", [#[double2, 4], #[two4, 16], #[two4,
 // we can set an incorrect memoized value, which is tricky and interesting
 
 LIES = Dict.fromList([#[double2, 100], #[two4, 150]])
-xx = IO.pTrace("deets", M.memoizeWithDictionary(LIES, powpow))
-qq = xx.get
-
-/*
+xx = M.memoizeWithDictionary(LIES, powpow)
 Study.report(
-  qq,
+  Tuple.snd(xx),
   "memoizeWithDictionary won't run the function if there's a prior value in the lookup",
   [#[#[1, 1], 1], #[double2, 100], #[two4, 150]],
 )
-*/
