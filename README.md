@@ -3,7 +3,7 @@
 Handle function arity as an n-tuple. Allows for convenient memoization of functions up to 9 arity!
 
 [![Madlib Project Badge](https://img.shields.io/badge/madlib-purple?logo=github&logoSize=auto)](//github.com/madlib-lang/madlib) <!-- $MADLIB.projectBadge -->
-[![ranked v0.0.1](https://img.shields.io/badge/v0.0.1-purple?label=version)](//github.com/brekk/ranked) <!-- $MADLIB.json.version -->
+[![ranked v0.0.2](https://img.shields.io/badge/v0.0.2-purple?label=version)](//github.com/brekk/ranked) <!-- $MADLIB.json.version -->
 
 ---
 
